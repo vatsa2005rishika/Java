@@ -1,35 +1,5 @@
 import java.util.Scanner;
 
-class Voter {
-    String name;
-    int age;
-    boolean hasVoted;
-
-    public Voter(String name, int age) {
-        this.name = name;
-        this.age = age;
-        this.hasVoted = false;
-    }
-
-    public boolean isEligible() {
-        return age >= 18;
-    }
-}
-
-class Candidate {
-    String name;
-    int votes;
-
-    public Candidate(String name) {
-        this.name = name;
-        this.votes = 0;
-    }
-
-    public void receiveVote() {
-        votes++;
-    }
-}
-
 public class VotingSystem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -81,3 +51,34 @@ public class VotingSystem {
         scanner.close();
     }
 }
+
+class Voter {
+    String name;
+    int age;
+    boolean hasVoted;
+
+    public Voter(String name, int age) {
+        this.name = name;
+        this.age = age;
+        this.hasVoted = false;
+    }
+
+    public boolean isEligible() {
+        return age >= 18;
+    }
+}
+
+class Candidate {
+    String name;
+    int votes;
+
+    public Candidate(String name) {
+        this.name = name;
+        this.votes = 0;
+    }
+
+    public void receiveVote() {
+        votes++;
+    }
+}
+
