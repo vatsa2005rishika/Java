@@ -1,0 +1,30 @@
+class Gp {  // Class name should start with an uppercase letter (Gp)
+    Gp() {
+        System.out.println("GP");
+    }
+}
+
+interface I {  
+    void display();
+}
+
+class Child extends Gp implements I {  
+    Child() {
+        System.out.println("CHILD");
+    }
+
+    public void childmethod() {
+        display();
+    }
+
+    public void display() {
+        System.out.println("METHOD OF INTERFACE");
+    }
+}
+
+public class Main {  
+    public static void main(String args[]) {
+        Child c = new Child();  
+        c.childmethod();
+    }
+}
